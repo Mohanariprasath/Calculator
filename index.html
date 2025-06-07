@@ -1,50 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>calculator</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculator</title>
+<style>
+  body {
+    background: #2c3e50;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .container {
+    background: #34495e;
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 0 20px #1abc9c;
+  }
+  input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    text-align: right;
+    background: #ecf0f1;
+    color: #2c3e50;
+  }
+  .buttons-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  input[type="button"] {
+    flex: 1;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background: #7f8c8d;
+    color: white;
+  }
+  input.operator {
+    background: #16a085;
+  }
+  input.operator:hover {
+    background: #1abc9c;
+  }
+  input.equal {
+    background: #e74c3c;
+  }
+  input.equal:hover {
+    background: #c0392b;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-            <form>
-                <div class="display">
-                    <input type="text" id="display" name="display" readonly />
-                </div>
-                <div>
-                    <input type="button" value="AC" onclick="document.getElementById('display').value = ''" class="operator" />
-                    <input type="button" value="DE" onclick="let d=document.getElementById('display'); d.value = d.value.slice(0, -1)" class="operator" />
-                    <input type="button" value="." onclick="document.getElementById('display').value += '.'" class="operator" />
-                    <input type="button" value="/" onclick="document.getElementById('display').value += '/'" class="operator" />
-                </div>
-                <div>
-                    <input type="button" value="7" onclick="document.getElementById('display').value += '7'" />
-                    <input type="button" value="8" onclick="document.getElementById('display').value += '8'" />
-                    <input type="button" value="9" onclick="document.getElementById('display').value += '9'" />
-                    <input type="button" value="" onclick="document.getElementById('display').value += ''" class="operator" />
-                </div>
-                <div>
-                    <input type="button" value="4" onclick="document.getElementById('display').value += '4'" />
-                    <input type="button" value="5" onclick="document.getElementById('display').value += '5'" />
-                    <input type="button" value="6" onclick="document.getElementById('display').value += '6'" />
-                    <input type="button" value="-" onclick="document.getElementById('display').value += '-'" class="operator" />
-                </div>
-                <div>
-                    <input type="button" value="1" onclick="document.getElementById('display').value += '1'" />
-                    <input type="button" value="2" onclick="document.getElementById('display').value += '2'" />
-                    <input type="button" value="3" onclick="document.getElementById('display').value += '3'" />
-                    <input type="button" value="+" onclick="document.getElementById('display').value += '+'" class="operator" />
-                </div>
-                <div>
-                    <input type="button" value="00" onclick="document.getElementById('display').value += '00'" />
-                    <input type="button" value="000" onclick="document.getElementById('display').value += '000'" />
-                    <input type="button" value="0" onclick="document.getElementById('display').value += '0'" />
-                    <input type="button" value="=" onclick="try { document.getElementById('display').value = eval(document.getElementById('display').value) } catch (e) { alert('Invalid Expression') }" class="equal operator" />
-                </div>
-            </form>
-        </div>
-    </div>
+  <div class="container">
+    <form>
+      <input type="text" id="display" readonly />
+      <div class="buttons-row">
+        <input type="button" value="AC" onclick="document.getElementById('display').value=''" class="operator" />
+        <input type="button" value="DE" onclick="let d=document.getElementById('display'); d.value=d.value.slice(0,-1)" class="operator" />
+        <input type="button" value="." onclick="document.getElementById('display').value+='.'" class="operator" />
+        <input type="button" value="/" onclick="document.getElementById('display').value+='/'" class="operator" />
+      </div>
+      <div class="buttons-row">
+        <input type="button" value="7" onclick="document.getElementById('display').value+='7'" />
+        <input type="button" value="8" onclick="document.getElementById('display').value+='8'" />
+        <input type="button" value="9" onclick="document.getElementById('display').value+='9'" />
+        <input type="button" value="" onclick="document.getElementById('display').value+=''" class="operator" />
+      </div>
+      <div class="buttons-row">
+        <input type="button" value="4" onclick="document.getElementById('display').value+='4'" />
+        <input type="button" value="5" onclick="document.getElementById('display').value+='5'" />
+        <input type="button" value="6" onclick="document.getElementById('display').value+='6'" />
+        <input type="button" value="-" onclick="document.getElementById('display').value+='-'" class="operator" />
+      </div>
+      <div class="buttons-row">
+        <input type="button" value="1" onclick="document.getElementById('display').value+='1'" />
+        <input type="button" value="2" onclick="document.getElementById('display').value+='2'" />
+        <input type="button" value="3" onclick="document.getElementById('display').value+='3'" />
+        <input type="button" value="+" onclick="document.getElementById('display').value+='+'" class="operator" />
+      </div>
+      <div class="buttons-row">
+        <input type="button" value="00" onclick="document.getElementById('display').value+='00'" />
+        <input type="button" value="000" onclick="document.getElementById('display').value+='000'" />
+        <input type="button" value="0" onclick="document.getElementById('display').value+='0'" />
+        <input type="button" value="=" onclick="try { document.getElementById('display').value=eval(document.getElementById('display').value) } catch(e) { alert('Invalid Expression') }" class="equal operator" />
+      </div>
+    </form>
+  </div>
 </body>
 </html>
