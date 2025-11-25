@@ -7,3 +7,5 @@ Technologies Used:
   CSS — styling & layout
 
   JavaScript — logic for the calculator
+
+Getting Started
