@@ -9,3 +9,5 @@ Technologies Used:
   JavaScript — logic for the calculator
 
 Getting Started
+  1. Clone the repository
+git clone https://github.com/your-username/calculator.git
