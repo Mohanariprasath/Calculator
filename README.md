@@ -14,3 +14,7 @@ git clone https://github.com/Mohanariprasath/calculator.git
 
   2. Navigate to project folder:
  cd calculator
+
+3. Run the project
+
+Simply open index.html in your browser.
