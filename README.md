@@ -18,3 +18,15 @@ git clone https://github.com/Mohanariprasath/calculator.git
 3. Run the project
 
 Simply open index.html in your browser.
+
+Usage
+
+Enter numbers using the on-screen keypad.
+
+Select an operator (+, -, ×, ÷).
+
+Enter the second number.
+
+Press = to see the result.
+
+Press C to clear the screen.
