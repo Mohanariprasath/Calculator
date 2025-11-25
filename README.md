@@ -12,5 +12,5 @@ Getting Started
   1. Clone the repository
 git clone https://github.com/your-username/calculator.git
 
-  2. Navigate to project folder
-cd calculator
+  2. Navigate to project folder:
+ cd calculator
