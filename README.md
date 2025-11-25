@@ -30,3 +30,7 @@ Enter the second number.
 Press = to see the result.
 
 Press C to clear the screen.
+
+License
+
+This project is licensed under the MIT License — free to use and modify.
